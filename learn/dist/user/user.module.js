@@ -9,22 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.UserModule = void 0;
 const common_1 = require("@nestjs/common");
-const book_module_1 = require("./book/book.module");
-const user_module_1 = require("./user/user.module");
-let AppModule = class AppModule {
+const user_controller_1 = require("./user.controller");
+let UserModule = class UserModule {
     constructor() {
-        console.log('Root/App Module');
+        console.log("UserModule");
     }
 };
-exports.AppModule = AppModule;
-exports.AppModule = AppModule = __decorate([
+exports.UserModule = UserModule;
+exports.UserModule = UserModule = __decorate([
     (0, common_1.Module)({
-        imports: [book_module_1.BookModule, user_module_1.UserModule],
-        controllers: [],
-        providers: [],
+        imports: [],
+        controllers: [user_controller_1.UserController],
+        providers: []
     }),
     __metadata("design:paramtypes", [])
-], AppModule);
-//# sourceMappingURL=app.module.js.map
+], UserModule);
+//# sourceMappingURL=user.module.js.map
